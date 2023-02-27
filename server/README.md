@@ -1,0 +1,43 @@
+# 커리큘럼
+
+- express 기본
+  - router
+    - async 처리
+  - middleware
+    - authentication 세팅
+  - validation 세팅
+  - 테스트 기본
+- 개발환경 세팅
+  - hot reload
+  - 절대경로 세팅
+  - docker 세팅
+- layer
+  - layer 설명
+  - directory 구조
+    - interface
+    - application
+    - infrastructure
+    - types
+    - modules
+    - di
+    - config
+- db 세팅
+  - entity 세팅
+  - repository 세팅
+  - db 테스트
+  - migration 이해
+- di 기본
+  - di 에 대한 설명
+  - 위에서 만들어진 형태 di 로 수정
+    - class 형태로 수정
+  - 테스트 변경
+- 기타 모듈
+  - config
+  - logger
+- monorepo
+- infra
+  - db 세팅
+  - serverless 란
+  - cloud run deploy
+  - loadbalance setting
+  - domain setting
