@@ -1,20 +1,16 @@
 import * as express from "express";
 import { Request, Response, NextFunction } from "express";
+import { wrapper } from "./middlewares/wrapper";
+import { MainController } from "./controllers";
 
 export class App {
   private readonly _app;
   constructor() {
+    const mainController = new MainController();
+
     this._app = express();
 
-    const wrapper = (fn: Function) => {
-      return async (req, res, next) => {
-        try {
-          await fn(req, res, next);
-        } catch (e) {
-          next(e);
-        }
-      };
-    };
+    this._app.use(mainController.router);
 
     this._app.get("/", (req: Request, res: Response) => {
       res.send("Hello World!!!");
