@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "src/*": ["src/*"],
+      "test/*": ["test/*"]
+    }
+    // "typeRoots": [
+    //   "./src/@types",
+    //   "./node_modules/@types",
+    //   "../../node_modules/@types"
+    // ]
+  },
+  // "include": ["src", "migration", "test"],
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "**/*.(spec|test).ts"]
+}
+// TODO. 인식에 문제가 좀 있다. 그래서 typeRoots 에도 ../../node_modules 로 적어야 인식이된다.
+// {
+//   "extends": "tsconfig/server.json",
+//   "include": ["src", "migration", "test"],
+//   "exclude": ["node_modules", "dist", "**/*.(spec|test).ts"]
+// }
