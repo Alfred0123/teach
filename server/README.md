@@ -1,14 +1,14 @@
 # 커리큘럼
 
 - express 기본
-  - router
-    - async 처리
-  - middleware
-    - authentication 세팅
-  - validation 세팅
+  - (완료) router
+    - (완료) async 처리
+  - (완료) middleware
+    - (보류) authentication 세팅
+  - (완료) validation 세팅
   - 테스트 기본
 - 개발환경 세팅
-  - hot reload
+  - (완료) hot reload
   - 절대경로 세팅
   - docker 세팅
 - layer
