@@ -1,6 +1,6 @@
 import * as express from "express";
 import { Request, Response, NextFunction } from "express";
-import { wrapper } from "./middlewares/wrapper";
+import { wrapper } from "@/middlewares/wrapper";
 import { MainController } from "src/controllers";
 
 export class App {
