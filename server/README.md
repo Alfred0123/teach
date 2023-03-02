@@ -6,10 +6,10 @@
   - (완료) middleware
     - (보류) authentication 세팅
   - (완료) validation 세팅
-  - 테스트 기본
+  - (완료) 테스트 기본
 - 개발환경 세팅
   - (완료) hot reload
-  - 절대경로 세팅
+  - (완료) 절대경로 세팅
   - docker 세팅
 - layer
   - layer 설명
@@ -26,6 +26,7 @@
   - repository 세팅
   - db 테스트
   - migration 이해
+- di 세팅 전 테스트 / 비교를 위해서
 - di 기본
   - di 에 대한 설명
   - 위에서 만들어진 형태 di 로 수정
@@ -36,6 +37,7 @@
   - logger
 - monorepo
 - infra
+  - dockerfile 세팅
   - db 세팅
   - serverless 란
   - cloud run deploy
