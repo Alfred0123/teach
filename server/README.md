@@ -11,6 +11,11 @@
   - (완료) hot reload
   - (완료) 절대경로 세팅
   - docker 세팅
+- db 세팅
+  - entity 세팅
+  - repository 세팅
+  - db 테스트
+  - migration 이해
 - layer
   - layer 설명
   - directory 구조
@@ -21,11 +26,6 @@
     - modules
     - di
     - config
-- db 세팅
-  - entity 세팅
-  - repository 세팅
-  - db 테스트
-  - migration 이해
 - di 세팅 전 테스트 / 비교를 위해서
 - di 기본
   - di 에 대한 설명
