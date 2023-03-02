@@ -1,4 +1,4 @@
-import "module-alias/register";
+import "./alias";
 import * as express from "express";
 import { Request, Response, NextFunction } from "express";
 import { App } from "./app";

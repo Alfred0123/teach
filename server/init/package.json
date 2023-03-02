@@ -9,9 +9,6 @@
     "watch": "npm run build && tsc-watch --onSuccess 'npm run start'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "_moduleAliases": {
-    "src": "dist"
-  },
   "author": "",
   "license": "ISC",
   "dependencies": {
