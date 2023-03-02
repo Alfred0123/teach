@@ -10,7 +10,7 @@
 - 개발환경 세팅
   - (완료) hot reload
   - (완료) 절대경로 세팅
-  - docker 세팅
+  - (완료) docker 세팅
 - db 세팅
   - entity 세팅
   - repository 세팅
