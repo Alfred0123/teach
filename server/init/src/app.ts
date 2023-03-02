@@ -2,6 +2,8 @@ import * as express from "express";
 import { Request, Response, NextFunction } from "express";
 import { wrapper } from "@/middlewares/wrapper";
 import { MainController } from "src/controllers";
+import { Pool } from "pg";
+import { PostgresService } from "src/pg";
 
 export class App {
   private readonly _app;
@@ -42,5 +44,10 @@ export class App {
     return this._app.listen(port, () => {
       console.log(`Example app listening on port ${port}`);
     });
+  };
+
+  public init = async () => {
+    await PostgresService.Create();
+    return;
   };
 }
