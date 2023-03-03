@@ -1,24 +1,30 @@
-import { Pool } from "pg";
+import { DataSource } from "typeorm";
+import { SampleT } from "src/entities/sample.entity";
 
 export class PostgresService {
-  public static pool: Pool;
+  private static datasource: DataSource;
 
   constructor() {}
 
   public static async Create() {
-    if (this.pool === undefined) {
-      const pool = new Pool({
+    if (this.datasource === undefined) {
+      const datasource = await new DataSource({
         host: "localhost",
-        user: "postgres",
+        port: 5432,
+        type: "postgres",
+        database: "postgres",
+        username: "postgres",
         password: "password",
-        max: 20,
-        idleTimeoutMillis: 30000,
-        connectionTimeoutMillis: 2000,
-      });
-      await pool.connect();
-      this.pool = pool;
-      return this.pool;
+        logging: true,
+        synchronize: true,
+        // migrationsRun: boolean;
+        // autoLoadEntities: true;
+        // migrations: string[];
+        entities: ["dist/entities/*.entity.js"],
+      }).initialize();
+      this.datasource = datasource;
+      return this.datasource;
     }
-    return this.pool;
+    return this.datasource;
   }
 }

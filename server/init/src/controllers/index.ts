@@ -3,6 +3,7 @@ import { wrapper } from "../middlewares/wrapper";
 import * as Joi from "joi";
 import { validate } from "../middlewares/validation";
 import { PostgresService } from "src/pg";
+import { SampleT } from "src/entities/sample.entity";
 
 const schema = Joi.object().keys({
   name: Joi.string().required(),
@@ -35,10 +36,10 @@ export class MainController {
   public pg = async (req: Request, res: Response, next: NextFunction) => {
     console.log("pg");
 
-    const pool = await PostgresService.Create();
-    // const result = await pool.query("insert into sample (id) \n values (1)");
-    const result = await pool.query("select * from sample");
-    // console.log(result.rows);
+    const em = await (await PostgresService.Create()).createEntityManager();
+    const payload = new SampleT();
+    payload.message = "hello";
+    await em.save(payload);
 
     return res.status(200).json({
       message: "success",

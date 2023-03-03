@@ -4,6 +4,7 @@ import { wrapper } from "@/middlewares/wrapper";
 import { MainController } from "src/controllers";
 import { Pool } from "pg";
 import { PostgresService } from "src/pg";
+import { DataSource } from "typeorm";
 
 export class App {
   private readonly _app;

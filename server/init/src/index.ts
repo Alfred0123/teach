@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import "./alias";
 import * as express from "express";
 import { Request, Response, NextFunction } from "express";
