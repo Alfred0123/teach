@@ -14,13 +14,8 @@
 - (완료) orm 을 안썻을때 생기는 문제점
   - (완료) query 문을 쌩으로 짜야되는데, 재사용성도 안좋고, 위험할수도 있다.
   - (완료) migration 할때, 코드랑 유기적이지가 않다.
-  - synchronize 가 위험하다고 하는데, 그럼 다른방법은?
-  - proxy 같은 작업을 만들기가 어렵다.
-- db 세팅
-  - entity 세팅
-  - repository 세팅
-  - db 테스트
-  - migration 이해
+  - (완료) synchronize 가 위험하다고 하는데, 그럼 다른방법은?
+  - (완료) proxy 같은 작업을 만들기가 어렵다.
 - layer
   - layer 설명
   - directory 구조
@@ -37,6 +32,10 @@
   - 위에서 만들어진 형태 di 로 수정
     - class 형태로 수정
   - 테스트 변경
+- db 세팅
+  - (완료) entity 세팅
+  - (완료) migration 이해
+  - repository 세팅
 - 기타 모듈
   - config
   - logger

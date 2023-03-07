@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, AfterInsert } from "typeorm";
 
 @Entity()
 export class SampleT {
@@ -10,4 +10,9 @@ export class SampleT {
 
   @Column({ type: "integer", nullable: true })
   age?: number;
+
+  @AfterInsert()
+  afterInsert() {
+    console.log("insert something", { this: this });
+  }
 }
