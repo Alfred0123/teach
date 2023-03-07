@@ -30,7 +30,7 @@
     // ]
   },
   // "include": ["src", "migration", "test"],
-  "include": ["src"],
+  "include": ["src", "migrations"],
   "exclude": ["node_modules", "dist", "**/*.(spec|test).ts"]
 }
 // TODO. 인식에 문제가 좀 있다. 그래서 typeRoots 에도 ../../node_modules 로 적어야 인식이된다.

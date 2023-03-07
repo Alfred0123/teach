@@ -16,11 +16,11 @@ export class PostgresService {
         username: "postgres",
         password: "password",
         logging: true,
-        synchronize: true,
-        // migrationsRun: boolean;
+        synchronize: false,
+        migrationsRun: true,
+        migrations: ["dist/migrations/scripts/*.js"],
         // autoLoadEntities: true;
-        // migrations: string[];
-        entities: ["dist/entities/*.entity.js"],
+        entities: ["dist/src/entities/*.entity.js"],
       }).initialize();
       this.datasource = datasource;
       return this.datasource;
