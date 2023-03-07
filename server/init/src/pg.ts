@@ -17,8 +17,8 @@ export class PostgresService {
         password: "password",
         logging: true,
         synchronize: false,
-        migrationsRun: true,
-        migrations: ["dist/migrations/scripts/*.js"],
+        // migrationsRun: true,
+        // migrations: ["dist/migrations/scripts/*.js"],
         // autoLoadEntities: true;
         entities: ["dist/src/entities/*.entity.js"],
       }).initialize();

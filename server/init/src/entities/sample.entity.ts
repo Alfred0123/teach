@@ -7,4 +7,7 @@ export class SampleT {
 
   @Column({ type: "varchar", nullable: true })
   message?: string;
+
+  @Column({ type: "integer", nullable: true })
+  age?: number;
 }
