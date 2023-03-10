@@ -5,7 +5,9 @@ import { MainController } from "src/controllers";
 import { Pool } from "pg";
 import { PostgresService } from "src/pg";
 import { DataSource } from "typeorm";
+import { injectable } from "inversify";
 
+@injectable()
 export class App {
   private readonly _app;
   constructor() {
