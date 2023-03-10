@@ -20,12 +20,45 @@
   - layer 설명
   - directory 구조
     - interface
+      - rest-api
+        - middleware
+        - controller
+          - user
+            - GET example.com/user
+            - POST example.com/user
+        - validation
+        - presentation
+      - graphql
+      - pub/sub
     - application
+      - usecase
+        - user
+          - dto
+          - interface
+          - model
+        - auth
+      - logic
+        - user
     - infrastructure
+      - database
+        - entities
+        - repository
+          - getUser
+            - find({where: { user: :id }})
+      - external-api
+        - twich
+          - api.twitch.tv/user/:id
     - types
+      - dto
+      - enum
+      - interface
     - modules
+      - slack
+      - postgres
+      - logger
     - di
     - config
+      - config service
 - di 세팅 전 테스트 / 비교를 위해서
 - di 기본
   - di 에 대한 설명
