@@ -4,19 +4,22 @@ import * as Joi from "joi";
 import { validate } from "../middlewares/validation";
 import { PostgresService } from "src/pg";
 import { SampleT } from "src/entities/sample.entity";
+import { injectable } from "inversify";
 
 const schema = Joi.object().keys({
   name: Joi.string().required(),
   age: Joi.number().min(10).optional().default(10),
 });
 
+@injectable()
 export class MainController {
   private readonly _router: Router;
 
   constructor() {
     this._router = Router();
 
-    this._router.get("/main", validate(schema), wrapper(this.main));
+    // this._router.get("/main", validate(schema), wrapper(this.main));
+    this._router.get("/main", wrapper(this.main));
 
     this._router.get("/pg", wrapper(this.pg));
   }

@@ -5,13 +5,17 @@ import { MainController } from "src/controllers";
 import { Pool } from "pg";
 import { PostgresService } from "src/pg";
 import { DataSource } from "typeorm";
-import { injectable } from "inversify";
+import { injectable, inject } from "inversify";
+import { CONTROLLER } from "src/di/symbols/controller";
+import { IMainController } from "src/types/interface/controller";
 
 @injectable()
 export class App {
   private readonly _app;
-  constructor() {
-    const mainController = new MainController();
+  constructor(
+    @inject(CONTROLLER.MAIN) private readonly mainController: IMainController
+  ) {
+    // const mainController = new MainController();
 
     this._app = express();
 
